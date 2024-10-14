@@ -1,0 +1,325 @@
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 20px;
+    color: #333;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+.filters {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+/* .filter-select {
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+
+.filter-select {
+    padding: 10px;
+    border-radius: 20px;
+    border: 1px solid #ddd;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+}
+
+.filter-select:hover {
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+}
+*/
+.filter-select {
+    padding: 12px;
+    border-radius: 12px;
+    border: 1px solid #ddd;
+    background-color: #f9f9f9;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+    transition: box-shadow 0.3s ease;
+}
+
+.filter-select:hover {
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* More natural hover shadow */
+}
+
+
+
+.competition-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+/* .competition-card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.competition-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+*/
+
+.competition-card {
+    background-color: white;
+    border-radius: 16px; /* More pronounced rounded corners */
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); /* Softer shadow */
+    padding: 20px;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.competition-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* More natural hover shadow */
+}
+
+.competition-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 10px;
+    flex-wrap: wrap;
+}
+
+.competition-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0;
+    flex: 1;
+    margin-right: 10px;
+    word-break: break-word;
+}
+
+.curated {
+    background-color: #e6f7e6;
+    color: #28a745;
+    font-size: 12px;
+    padding: 2px 6px;
+    border-radius: 12px;
+    white-space: nowrap;
+    align-self: flex-start;
+}
+
+.competition-details {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.competition-labels {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    margin-bottom: 10px;
+}
+/*
+.label {
+    font-size: 12px;
+    padding: 2px 6px;
+    border-radius: 12px;
+}
+
+.label {
+    font-weight: 500;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+*/
+.label {
+    font-size: 12px;
+    padding: 4px 10px;
+    border-radius: 10px;
+    font-weight: 500;
+    background-color: #f0f0f0; /* Light gray for all labels */
+    color: #555; /* Consistent text color */
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+
+.label-Offline {
+    background-color: #fff3e0;
+    color: #ff9800;
+}
+
+.label-Online {
+    background-color: #e8f5e9;
+    color: #4caf50;
+}
+
+.label-language {
+    background-color: #f3e5f5;
+    color: #9c27b0;
+}
+
+/* .label-grades {
+    background-color: #fff9c4;
+    color: #fbc02d;
+}
+*/
+.label-grades {
+    background-color: #e3f2fd; /* Light blue background */
+    color: #1976d2; /* Soft blue text */
+}
+
+.register-container {
+    margin-top: auto;
+    padding-top: 10px;
+}
+
+/*.register-btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 8px 16px;
+    font-size: 14px;
+    cursor: pointer;
+    width: auto;
+    display: inline-block;
+}
+    
+.register-btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    padding: 10px 20px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.register-btn:hover {
+    background-color: #0056b3;
+}
+
+*/
+
+.register-btn {
+    background: linear-gradient(to bottom right, #007bff, #0056b3); /* Subtle gradient */
+    color: white;
+    border: none;
+    border-radius: 22px; /* Rounded button shape */
+    padding: 10px 20px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.1s ease;
+}
+
+.register-btn:hover {
+    background: linear-gradient(to bottom right, #0056b3, #003f7f); /* Darker gradient on hover */
+    transform: scale(1.02); /* Slightly enlarge on hover */
+}
+
+
+.show-more {
+    background: none;
+    border: none;
+    color: #007bff;
+    font-size: 14px;
+    cursor: pointer;
+    padding: 0;
+    margin-top: 10px;
+    display: block;
+    text-align: left;
+}
+
+.show-more:hover {
+    text-decoration: underline;
+    color: #0056b3;
+}
+
+.additional-info {
+    display: none;
+    margin-top: 10px;
+    font-size: 14px;
+    color: #666;
+    border-top: 1px solid #eee;
+    padding-top: 10px;
+}
+
+.additional-info h3 {
+    font-size: 16px;
+    margin: 10px 0 5px;
+    color: #333;
+}
+
+.additional-info p {
+    margin: 0 0 5px;
+}
+
+.prerequisites-list {
+    padding-left: 20px;
+    margin: 5px 0;
+    line-height: 1.2;
+}
+
+@media (min-width: 1200px) {
+    .competition-list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .competition-card {
+        width: 100%;
+        max-width: 800px;
+    }
+}
+/*
+@media (max-width: 480px) {
+    .competition-card {
+        width: 100%;
+    }
+
+    .competition-header {
+        flex-direction: column;
+    }
+
+    .curated {
+        margin-top: 5px;
+    }
+}
+
+@media (max-width: 480px) {
+    .filters {
+        display: block;
+        text-align: center;
+    }
+}
+*/
+@media (max-width: 480px) {
+    .competition-card {
+        width: 95%;
+    }
+
+    .filters {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .competition-header {
+        flex-direction: column;
+    }
+}
+
