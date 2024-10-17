@@ -1,199 +1,436 @@
-// Configuration for displayed fields
-const cardFields = ['name', 'location', 'date', 'method', 'language', 'grades'];
-const detailFields = ['prerequisites', 'category', 'organizedBy', 'indonesiaLocalOrganizer', 'structure', 'awards', 'finalRoundInfo', 'compFee', 'website', 'samplePaper'];
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 20px;
+    color: #333;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+/* Filter Container Styling */
+.filter-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto; /* Center the filter container */
+    max-width: 300px; /* Matches the competition card width */
+    width: 100%;
+    margin-bottom: 20px; /* Space between the filter and content below */
+}
+
+/* Toggle Button Styles */
+.filter-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #007aff; /* Apple's signature blue color */
+    color: white;
+    padding: 8px 16px; /* Reduced padding for a more compact size */
+    border: none;
+    border-radius: 10px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.2s ease, padding 0.2s ease;
+}
+
+.filter-toggle:hover {
+    background-color: #005bb5; /* Slightly darker blue on hover */
+}
+
+.filter-toggle.open {
+    padding: 6px 12px; /* Further reduced padding when the dropdown is open */
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0; /* Flat bottom corners when open */
+}
+
+/* Dropdown Filter Styles */
+.filter-dropdown {
+    display: none; /* Hidden by default */
+    background-color: #f9f9f9; /* Light background color */
+    border: 1px solid #e0e0e0;
+    border-radius: 0 0 12px 12px; /* Rounded bottom corners */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    padding: 12px;
+    width: 100%;
+    max-width: 600px; /* Ensures dropdown width matches design */
+}
+
+/* Dropdown visible when the toggle is active */
+.filter-dropdown.show {
+    display: block;
+}
+
+/* Filter Group Styles */
+.filter-group {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 8px 0; /* Consistent spacing between filter groups */
+}
+
+/* Styling for filter labels and inputs */
+.filter-label {
+    flex: 1; /* Ensures labels take up appropriate space */
+    font-size: 14px;
+    color: #333; /* Dark text color for readability */
+}
+
+.filter-select {
+    flex: 2; /* Inputs take slightly more space than labels */
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #ffffff; /* White background for dropdowns */
+}
+
+/* Filter Group for "Show curated only" Checkbox */
+.filter-group.curated-filter {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Align checkbox to the left */
+    width: 100%; /* Ensure it spans the full width */
+    margin: 8px 0; /* Consistent spacing */
+}
+
+/* Ensure the checkbox appears first, followed by the label */
+.filter-checkbox {
+    margin-right: 8px; /* Space between the checkbox and its label */
+}
 
 
+/* Checkbox alignment fix */
+.filter-checkbox {
+    margin-right: 8px; /* Space between the checkbox and label */
+}
 
-function createCompetitionCard(competition) {
-    const card = document.createElement('div');
-    card.className = 'competition-card';
-
-    // Set the logo path based on the competition ID or name
-    const logoPath = `images/${competition.logo}`;
-
-    let cardContent = `
-        <div class="competition-header">
-            <img src="${logoPath}" alt="${competition.name} Logo" class="competition-logo" onerror="this.style.display='none'"> <!-- Hide image if not found -->
-            <h2 class="competition-title">${competition.name}</h2>
-            ${competition.curated === "Yes" ? '<span class="curated">✓ Curated</span>' : ''}
-        </div>
-        <div class="competition-details">
-            <div>${competition.location}</div>
-            <div>${competition.date}</div>
-        </div>
-        <div class="competition-labels">
-            <span class="label label-${competition.method}">${competition.method}</span>
-            <span class="label label-language">${competition.language}</span>
-            <span class="label label-grades">${competition.grades}</span>
-        </div>
-    `;
-
-    if (competition.showRegister === "Yes") {
-        cardContent += `<div class="register-container"><button class="register-btn" onclick="window.open('${competition.website}', '_blank')">Register</button></div>`;
+/* Responsive Design for Smaller Screens */
+@media (max-width: 768px) {
+    .filter-group {
+        flex-direction: column; /* Stack filter elements vertically on small screens */
+        align-items: flex-start;
     }
 
-    cardContent += `
-        <button class="show-more">Show More</button>
-        <div class="additional-info">
-            <h3>Competition Details</h3>
-    `;
-
-    detailFields.forEach(field => {
-        if (competition[field]) {
-            if (field === 'website' || field === 'samplePaper') {
-                cardContent += `<p><strong>${formatFieldName(field)}:</strong> <a href="${competition[field]}" target="_blank">${competition[field]}</a></p>`;
-            } else {
-                cardContent += `<p><strong>${formatFieldName(field)}:</strong> ${formatContent(competition[field])}</p>`;
-            }
-        }
-    });
-
-    cardContent += `</div>`;
-    card.innerHTML = cardContent;
-
-    const showMoreBtn = card.querySelector('.show-more');
-    const additionalInfo = card.querySelector('.additional-info');
-    showMoreBtn.addEventListener('click', () => {
-        if (additionalInfo.style.display === 'none' || additionalInfo.style.display === '') {
-            additionalInfo.style.display = 'block';
-            showMoreBtn.textContent = 'Show Less';
-        } else {
-            additionalInfo.style.display = 'none';
-            showMoreBtn.textContent = 'Show More';
-        }
-    });
-
-    return card;
+    .filter-select, .filter-checkbox {
+        width: 100%; /* Full-width for better alignment on smaller screens */
+    }
 }
 
-function formatFieldName(field) {
-    return field.replace(/([A-Z])/g, ' $1').replace(/^./, str => str.toUpperCase());
+/* Smooth Fade Animation (if needed) */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 
-function formatContent(content) {
-    // Check if the content contains any line breaks and add a <br> at the beginning if it does
-    let formattedContent = content.includes('\n') ? '<br>' + content : content;
 
-    // Replace double line breaks with a smaller gap
-    formattedContent = formattedContent.replace(/\n\n/g, '<span class="small-gap"></span>');
+@media (max-width: 480px) {
+    .filter-container {
+        align-items: center;
+    }
+
+    .filter-dropdown {
+        width: 100%;
+    }
+}
+
+.competition-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+/* .competition-card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.competition-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+*/
+
+.competition-card {
+    background-color: white;
+    border-radius: 16px; /* More pronounced rounded corners */
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); /* Softer shadow */
+    padding: 20px;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.competition-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* More natural hover shadow */
+}
+
+/* Competition Header with Larger Logo */
+.competition-header {
+    display: flex;
+    align-items: center; /* Align logo and text vertically */
+    margin-bottom: 10px;
+    gap: 15px; /* Space between the logo and the text */
+    flex-wrap: wrap; /* Prevent wrapping to keep logo and text on the same line */
+    justify-content: space-between; /* Ensures space between the title and label */
+
+}
+
+.competition-logo {
+    width: 60px; /* Increase the logo size */
+    height: 60px; /* Increase height to match width for a larger display */
+    border-radius: 8px; /* Optional rounded corners for a softer look */
+    object-fit: cover; /* Ensure the logo scales correctly without distortion */
+    flex-shrink: 0; /* Prevent the logo from shrinking on smaller screens */
+}
+
+.competition-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0;
+    flex: 1; /* Allow the title to take up the remaining space */
+    word-break: break-word; /* Ensure text breaks properly without overlapping */
+    /*margin-left: 10px; Ensure spacing between the logo and text */
+}
+
+.curated {
+    background-color: #e6f7e6;
+    color: #28a745;
+    font-size: 12px;
+    padding: 2px 6px;
+    border-radius: 12px;
+    white-space: nowrap;
+    align-self: flex-start;
+    margin-top: 5px;    
+}
+
+.competition-details {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.competition-labels {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    margin-bottom: 10px;
+}
+/*
+.label {
+    font-size: 12px;
+    padding: 2px 6px;
+    border-radius: 12px;
+}
+
+.label {
+    font-weight: 500;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+*/
+.label {
+    font-size: 12px;
+    padding: 4px 10px;
+    border-radius: 10px;
+    font-weight: 500;
+    background-color: #f0f0f0; /* Light gray for all labels */
+    color: #555; /* Consistent text color */
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+
+.label-Offline {
+    background-color: #fff3e0;
+    color: #ff9800;
+}
+
+.label-Online {
+    background-color: #e8f5e9;
+    color: #4caf50;
+}
+
+.label-language {
+    background-color: #f3e5f5;
+    color: #9c27b0;
+}
+
+/* .label-grades {
+    background-color: #fff9c4;
+    color: #fbc02d;
+}
+*/
+.label-grades {
+    background-color: #e3f2fd; /* Light blue background */
+    color: #1976d2; /* Soft blue text */
+}
+
+.register-container {
+    margin-top: auto;
+    padding-top: 10px;
+}
+
+/*.register-btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 8px 16px;
+    font-size: 14px;
+    cursor: pointer;
+    width: auto;
+    display: inline-block;
+}
     
-    // Replace single line breaks with standard line breaks
-    formattedContent = formattedContent.replace(/\n/g, '<br>');
+.register-btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    padding: 10px 20px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
 
-    return formattedContent;
+.register-btn:hover {
+    background-color: #0056b3;
+}
+
+*/
+
+.register-btn {
+    background: linear-gradient(to bottom right, #007bff, #0056b3); /* Subtle gradient */
+    color: white;
+    border: none;
+    border-radius: 22px; /* Rounded button shape */
+    padding: 10px 20px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.1s ease;
+}
+
+.register-btn:hover {
+    background: linear-gradient(to bottom right, #0056b3, #003f7f); /* Darker gradient on hover */
+    transform: scale(1.02); /* Slightly enlarge on hover */
 }
 
 
-function renderCompetitions(filteredCompetitions) {
-    const competitionList = document.getElementById('competitionList');
-    competitionList.innerHTML = '';
-    filteredCompetitions.forEach(competition => {
-        competitionList.appendChild(createCompetitionCard(competition));
-    });
+.show-more {
+    background: none;
+    border: none;
+    color: #007bff;
+    font-size: 14px;
+    cursor: pointer;
+    padding: 0;
+    margin-top: 10px;
+    display: block;
+    text-align: left;
 }
 
-function toggleFilters() {
-    const dropdown = document.getElementById('filterDropdown');
-    const toggleButton = document.getElementById('filterToggle');
+.show-more:hover {
+    text-decoration: underline;
+    color: #0056b3;
+}
 
-    dropdown.classList.toggle('show');
-    toggleButton.classList.toggle('open'); // Add 'open' class to the button for styling changes
+.additional-info {
+    display: none;
+    margin-top: 10px;
+    font-size: 14px;
+    color: #666;
+    border-top: 1px solid #eee;
+    padding-top: 10px;
+}
 
-    // Directly control styles to avoid lag
-    dropdown.style.opacity = dropdown.classList.contains('show') ? '1' : '0';
-    dropdown.style.transform = dropdown.classList.contains('show') ? 'translateY(0)' : 'translateY(-10px)';
+.additional-info h3 {
+    font-size: 16px;
+    margin: 10px 0 5px;
+    color: #333;
+}
+
+/* Smaller gap within fields for line breaks */
+.small-gap {
+    display: block;
+    height: 7px; /* Adjust this value to control the gap size within a field */
+}
+
+.additional-info p {
+    margin: 10px 0; /* Space between different fields */
+}
+
+.additional-info br + br {
+    margin: 0; /* Reset margin between two consecutive <br> tags */
 }
 
 
-function populateFilters() {
-    const methodFilter = document.getElementById('methodFilter');
-    const languageFilter = document.getElementById('languageFilter');
-    const gradeFilter = document.getElementById('gradeFilter');
+.prerequisites-list {
+    padding-left: 20px;
+    margin: 5px 0;
+    line-height: 1.2;
+}
 
-    const methods = new Set();
-    const languages = new Set();
-    const gradeOptions = [
-        "Kindergarten", "Grade 1", "Grade 2", "Grade 3", "Grade 4",
-        "Grade 5", "Grade 6", "Grade 7", "Grade 8", "Grade 9",
-        "Grade 10", "Grade 11", "Grade 12"
-    ];
-
-    competitions.forEach(competition => {
-        competition.method.split('&').forEach(meth => methods.add(meth.trim()));
-        competition.language.split('&').forEach(lang => languages.add(lang.trim()));
-    });
-
-    function populateSelect(element, values) {
-        element.innerHTML = '<option value="">All</option>' +
-            Array.from(values).map(value => `<option value="${value}">${value}</option>`).join('');
+@media (min-width: 1200px) {
+    .competition-list {
+        flex-direction: column;
+        align-items: center;
     }
 
-    populateSelect(methodFilter, methods);
-    populateSelect(languageFilter, languages);
-    populateSelect(gradeFilter, gradeOptions);
+    .competition-card {
+        width: 100%;
+        max-width: 800px;
+    }
 }
-
-function filterCompetitions() {
-    const methodFilter = document.getElementById('methodFilter').value;
-    const languageFilter = document.getElementById('languageFilter').value;
-    const gradeFilter = document.getElementById('gradeFilter').value;
-    const curatedFilter = document.getElementById('curatedFilter').checked;
-
-    const filteredCompetitions = competitions.filter(competition => {
-        const methodMatch = !methodFilter || competition.method.includes(methodFilter);
-        const languageMatch = !languageFilter || competition.language.includes(languageFilter);
-        const gradeMatch = !gradeFilter || isGradeInRange(competition.grades, gradeFilter);
-        const curatedMatch = !curatedFilter || competition.curated === "Yes";
-        return methodMatch && languageMatch && gradeMatch && curatedMatch;
-    });
-
-    renderCompetitions(filteredCompetitions);
-}
-
-function isGradeInRange(gradeRange, selectedGrade) {
-    const gradeOrder = [
-        "Kindergarten", "Grade 1", "Grade 2", "Grade 3", "Grade 4",
-        "Grade 5", "Grade 6", "Grade 7", "Grade 8", "Grade 9",
-        "Grade 10", "Grade 11", "Grade 12"
-    ];
-
-    if (gradeRange.includes('-')) {
-        const [startGrade, endGrade] = gradeRange.split('-').map(g => g.trim());
-        const startIndex = gradeOrder.indexOf(startGrade);
-        const endIndex = gradeOrder.indexOf(endGrade);
-        const selectedIndex = gradeOrder.indexOf(selectedGrade);
-
-        return selectedIndex >= startIndex && selectedIndex <= endIndex;
+/*
+@media (max-width: 480px) {
+    .competition-card {
+        width: 100%;
     }
 
-    if (gradeRange.includes('& Below')) {
-        const maxGrade = gradeRange.replace('& Below', '').trim();
-        const maxIndex = gradeOrder.indexOf(maxGrade);
-        const selectedIndex = gradeOrder.indexOf(selectedGrade);
-
-        return selectedIndex <= maxIndex;
+    .competition-header {
+        flex-direction: column;
     }
 
-    return gradeRange === selectedGrade;
+    .curated {
+        margin-top: 5px;
+    }
 }
 
-document.addEventListener('DOMContentLoaded', () => {
-    populateFilters();
-    renderCompetitions(competitions);
+@media (max-width: 480px) {
+    .filters {
+        display: block;
+        text-align: center;
+    }
+}
+*/
+@media (max-width: 480px) {
+    .competition-card {
+        width: 95%;
+    }
 
-    document.getElementById('filterToggle').addEventListener('click', toggleFilters);
-    document.getElementById('methodFilter').addEventListener('change', filterCompetitions);
-    document.getElementById('languageFilter').addEventListener('change', filterCompetitions);
-    document.getElementById('gradeFilter').addEventListener('change', filterCompetitions);
-    document.getElementById('curatedFilter').addEventListener('change', filterCompetitions);
+    .filters {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .competition-header {
+        flex-direction: column; /* Stack the items vertically */
+        align-items: flex-start; /* Align items to the start */
+    }
 
-
-    // Close dropdown when clicking outside
-    document.addEventListener('click', (e) => {
-        const filterContainer = document.querySelector('.filter-container');
-        const filterDropdown = document.getElementById('filterDropdown');
-        if (!filterContainer.contains(e.target) && filterDropdown.classList.contains('show')) {
-            filterDropdown.classList.remove('show');
-        }
-    });
-});
+    .competition-logo {
+        align-self: flex-start; /* Align the logo to the start */
+        margin-top: 10px; /* Add spacing between the logo and title */
+    }
+}
