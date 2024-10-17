@@ -18,7 +18,8 @@ const competitions = [
         "finalRoundInfo": "Top 40% are eligible to join Champions Division of SEAMO X\n\nThe Next 60% can still join SEAMO X Open Division\n\nSEAMO X 2025 will be held on 17-20 Jan 2025 in Kuala Lumpur, Malaysia",
         "compFee": "",
         "website": "https://seamo-official.org",
-        "samplePaper": "https://seamo-official.org/resources"
+        "samplePaper": "https://seamo-official.org/resources",
+        "logo":"seamo.png"
     },
     {
         "id": "2",
@@ -39,7 +40,8 @@ const competitions = [
         "finalRoundInfo": "Only Gold is eligible for the Final Round on 12-16 July 2024 in Kuala Lumpur, Malaysia",
         "compFee": "",
         "website": "https://www.wminv.org/",
-        "samplePaper": "bit.ly/wmipast"
+        "samplePaper": "bit.ly/wmipast",
+        "logo":"wmi.jpeg"
     },
     {
         "id": "3",
@@ -60,7 +62,8 @@ const competitions = [
         "finalRoundInfo": "Bronze & Above is eligible to join SMGF (Singapore Math Global Finals) and SIMOC (SIngapore International Math Olympiad Challenge)\n\nSilver & Above is eligible to join IJMO (International Junior Math Olympiad)\n",
         "compFee": "",
         "website": "https://sasmo.sg/",
-        "samplePaper": ""
+        "samplePaper": "",
+        "logo":"sasmo.png"
     },
     {
         "id": "4",
@@ -81,7 +84,8 @@ const competitions = [
         "finalRoundInfo": "Bronze & Above is eligible to join SMGF (Singapore Math Global Finals) and SIMOC (SIngapore International Math Olympiad Challenge)\n\nSilver & Above is eligible to join IJMO (International Junior Math Olympiad)\n",
         "compFee": "IDR 450,000",
         "website": "https://amo.sg/",
-        "samplePaper": ""
+        "samplePaper": "",
+        "logo":"AMO.jpg"
     },
     {
         "id": "5",
@@ -102,7 +106,8 @@ const competitions = [
         "finalRoundInfo": "Bronze & Above is eligible to join SMGF (Singapore Math Global Finals)",
         "compFee": "",
         "website": "https://singamath.com/",
-        "samplePaper": ""
+        "samplePaper": "",
+        "logo":"SMC.png"
     },
     {
         "id": "6",
