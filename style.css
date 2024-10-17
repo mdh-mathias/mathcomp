@@ -19,25 +19,6 @@ h1 {
     flex-wrap: wrap;
 }
 
-/* .filter-select {
-    padding: 8px;
-    border-radius: 4px;
-    border: 1px solid #ccc;
-}
-
-
-.filter-select {
-    padding: 10px;
-    border-radius: 20px;
-    border: 1px solid #ddd;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-    transition: box-shadow 0.3s ease;
-}
-
-.filter-select:hover {
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
-}
-*/
 .filter-select {
     padding: 12px;
     border-radius: 12px;
@@ -59,24 +40,6 @@ h1 {
     gap: 20px;
     justify-content: center;
 }
-
-/* .competition-card {
-    background-color: white;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    width: 300px;
-    display: flex;
-    flex-direction: column;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.competition-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-    transition: transform 0.2s, box-shadow 0.2s;
-}
-*/
 
 .competition-card {
     background-color: white;
@@ -133,18 +96,7 @@ h1 {
     gap: 5px;
     margin-bottom: 10px;
 }
-/*
-.label {
-    font-size: 12px;
-    padding: 2px 6px;
-    border-radius: 12px;
-}
 
-.label {
-    font-weight: 500;
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
-}
-*/
 .label {
     font-size: 12px;
     padding: 4px 10px;
@@ -171,11 +123,7 @@ h1 {
     color: #9c27b0;
 }
 
-/* .label-grades {
-    background-color: #fff9c4;
-    color: #fbc02d;
-}
-*/
+
 .label-grades {
     background-color: #e3f2fd; /* Light blue background */
     color: #1976d2; /* Soft blue text */
@@ -185,35 +133,6 @@ h1 {
     margin-top: auto;
     padding-top: 10px;
 }
-
-/*.register-btn {
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 20px;
-    padding: 8px 16px;
-    font-size: 14px;
-    cursor: pointer;
-    width: auto;
-    display: inline-block;
-}
-    
-.register-btn {
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 50px;
-    padding: 10px 20px;
-    font-size: 14px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.register-btn:hover {
-    background-color: #0056b3;
-}
-
-*/
 
 .register-btn {
     background: linear-gradient(to bottom right, #007bff, #0056b3); /* Subtle gradient */
