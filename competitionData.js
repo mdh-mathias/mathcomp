@@ -15,7 +15,7 @@ const competitions = [
         "indonesiaLocalOrganizer": "Edukultur",
         "structure": "Paper K (45 minutes):\n15 Multiple Choice\n\nPaper A - F (90 minutes):\n- Section A: 10 Multiple Choice (3 marks each)\n- Section B: 10 Multiple Choice (4 marks each)\n- Section C: 5 Short Answer (6 marks each)",
         "awards": "For each grade level, awards will be given based on country rank:\n\nTop 8%: Gold Medal\nNext 12%: Silver Medal\nNext 20%: Bronze Medal",
-        "finalRoundInfo": "Top 40% are eligible to join Champions Division of SEAMO X\n\nThe Next 60% can still join SEAMO X Open Division\n\nSEAMO X 2025 will be held on 17-20 Jan 2025 in Kuala Lumpur, Malaysia",
+        "finalRoundInfo": "Top 40% are eligible to join Champions Division of SEAMO X. The Next 60% can still join SEAMO X Open Division\nSEAMO X 2025 will be held on 17-20 Jan 2025 in Kuala Lumpur, Malaysia",
         "compFee": "",
         "website": "https://seamo-official.org",
         "samplePaper": "https://seamo-official.org/resources",
