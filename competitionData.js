@@ -13,7 +13,7 @@ const competitions = [
         "category": "Paper K: Kindergarten\nPaper A: Grade 1 & 2\nPaper B: Grade 3 & 4\nPaper C: Grade 5 & 6\nPaper D: Grade 7 & 8\nPaper E: Grade 9 & 10\nPaper F: Grade 11 & 12\n",
         "organizedBy": "Terry Chew Academy",
         "indonesiaLocalOrganizer": "Edukultur",
-        "structure": "Paper K (40 minutes):\n-Section A: 10 Multiple Choice (3 marks each)\n-Section B: 5 Multiple Choice (4 marks each)\n\nPaper A - F (90 minutes):\n- Section A: 10 Multiple Choice (3 marks each)\n- Section B: 10 Multiple Choice (4 marks each)\n- Section C: 5 Short Answer (6 marks each)",
+        "structure": "Paper K (40 minutes):\n- Section A: 10 Multiple Choice (3 marks each)\n- Section B: 5 Multiple Choice (4 marks each)\n\nPaper A - F (90 minutes):\n- Section A: 10 Multiple Choice (3 marks each)\n- Section B: 10 Multiple Choice (4 marks each)\n- Section C: 5 Short Answer (6 marks each)",
         "awards": "For each grade level, awards will be given based on country rank:\nTop 8%: Gold Medal\nNext 12%: Silver Medal\nNext 20%: Bronze Medal",
         "finalRoundInfo": "Top 40% are eligible to join Champions Division of SEAMO X. The Next 60% can still join SEAMO X Open Division.\nSEAMO X 2025 will be held on 17-20 Jan 2025 in Kuala Lumpur, Malaysia",
         "compFee": "",
