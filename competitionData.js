@@ -103,7 +103,7 @@ const competitions = [
         "indonesiaLocalOrganizer": "SIMCC Indonesia",
         "structure": "Section A: 15 Multiple Choice (2 marks each)\nSection B: 10 Short Answer (4 marks each)\nSection C: 6 Short Answer (5 marks each)\n\nNo penalty for wrong answer\nTotal Score: 100 marks (90 minutes)",
         "awards": "For each grade level, awards will be given based on global rank:\nPerfect Score\nTop 8%: Exemplary Award\nNext 12%: Outstanding Award\nNext 20%: Commendable Award\nNext 10%: Honorable Mention",
-        "finalRoundInfo": "Commendable & Above is eligible to join SMGF (Singapore Math Global Finals) 2025",
+        "finalRoundInfo": "Commendable & Above is eligible to join SMGF (Singapore Math Global Finals) 2025.",
         "compFee": "",
         "website": "https://singamath.com/",
         "samplePaper": "",
