@@ -81,7 +81,7 @@ const competitions = [
         "indonesiaLocalOrganizer": "SIMCC Indonesia",
         "structure": "Section A: 15 Multiple Choice (3 marks each)\nSection B: 5 Multiple Choice (5 marks each)\nSection C: 5 Short Answer (6 marks each)\n\nNo penalty for wrong answer\nTotal Score: 100 marks (90 minutes)",
         "awards": "For each grade level, awards will be given based on global rank:\nPerfect Score\nTop 8%: Gold Medal\nNext 12%: Silver Medal\nNext 20%: Bronze Medal\nNext 10%: Honorable Mention",
-        "finalRoundInfo": "Bronze & Above is eligible to join SMGF (Singapore Math Global Finals) 2025 and SIMOC (SIngapore International Math Olympiad Challenge) 2025\nSilver & Above is eligible to join IJMO (International Junior Math Olympiad) 2025\n",
+        "finalRoundInfo": "Bronze & Above is eligible to join SMGF (Singapore Math Global Finals) 2025 and SIMOC (SIngapore International Math Olympiad Challenge) 2025. Silver & Above is eligible to join IJMO (International Junior Math Olympiad) 2025.\n",
         "compFee": "IDR 450,000",
         "website": "https://amo.sg/",
         "samplePaper": "",
