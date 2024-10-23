@@ -11,20 +11,42 @@ function createCompetitionCard(competition) {
     // Set the logo path based on the competition ID or name
     const logoPath = `images/${competition.logo}`;
 
+    let locationHtml = '';
+    const countryCode = getCountryCode(competition.location);
+    
+    if (countryCode === 'world') {
+        locationHtml = `<span class="material-icons">public</span>`;
+    } else if (countryCode) {
+        locationHtml = `<span class="flag-icon flag-icon-${countryCode}"></span>`;
+    }
+
+    locationHtml += `<span class="location-text">${competition.location}</span>`;
+
     let cardContent = `
         <div class="competition-header">
-            <img src="${logoPath}" alt="${competition.name} Logo" class="competition-logo" onerror="this.style.display='none'"> <!-- Hide image if not found -->
-            <h2 class="competition-title">${competition.name}</h2>
+            <img src="${logoPath}" alt="${competition.name} Logo" class="competition-logo" onerror="this.onerror=null; this.style.display='none';">
+            <div class="competition-info">
+                <div class="competition-title">${competition.name}</div>
+                <div class="competition-location">
+                    ${locationHtml}
+                </div>
+                <div class="competition-date">${competition.date}</div>
+            </div>
             ${competition.curated === "Yes" ? '<span class="curated">✓ Curated</span>' : ''}
         </div>
-        <div class="competition-details">
-            <div>${competition.location}</div>
-            <div>${competition.date}</div>
-        </div>
         <div class="competition-labels">
-            <span class="label label-${competition.method}">${competition.method}</span>
-            <span class="label label-language">${competition.language}</span>
-            <span class="label label-grades">${competition.grades}</span>
+            <span class="label label-${competition.method}">
+                <i class="material-icons">${getMethodIcon(competition.method)}</i>
+                ${competition.method}
+            </span>
+            <span class="label label-language">
+                <i class="material-icons">language</i>
+                ${competition.language}
+            </span>
+            <span class="label label-grades">
+                <i class="material-icons">school</i>
+                ${competition.grades}
+            </span>
         </div>
     `;
 
@@ -33,7 +55,12 @@ function createCompetitionCard(competition) {
     }
 
     cardContent += `
-        <button class="show-more">Show More</button>
+        <button class="show-more">
+            <svg class="show-more-icon" width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 1L6 6L11 1" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+            <span class="show-more-text">Show More</span>
+        </button>
         <div class="additional-info">
             <h3>Competition Details</h3>
     `;
@@ -56,10 +83,12 @@ function createCompetitionCard(competition) {
     showMoreBtn.addEventListener('click', () => {
         if (additionalInfo.style.display === 'none' || additionalInfo.style.display === '') {
             additionalInfo.style.display = 'block';
-            showMoreBtn.textContent = 'Show Less';
+            showMoreBtn.querySelector('.show-more-text').textContent = 'Show Less';
+            showMoreBtn.classList.add('active');
         } else {
             additionalInfo.style.display = 'none';
-            showMoreBtn.textContent = 'Show More';
+            showMoreBtn.querySelector('.show-more-text').textContent = 'Show More';
+            showMoreBtn.classList.remove('active');
         }
     });
 
@@ -81,6 +110,43 @@ function formatContent(content) {
     formattedContent = formattedContent.replace(/\n/g, '<br>');
 
     return formattedContent;
+}
+
+// Add this helper function to get the country code
+function getCountryCode(location) {
+    const countryMap = {
+        'USA': 'us',
+        'UK': 'gb',
+        'Canada': 'ca',
+        'Taiwan': 'tw',
+        'Singapore': 'sg',
+        'Indonesia': 'id',
+        'Australia': 'au',
+        'China': 'cn',
+        'Japan': 'jp',
+        'South Korea': 'kr',
+        'India': 'in',
+        'Germany': 'de',
+        'France': 'fr',
+        'Italy': 'it',
+        'Spain': 'es',
+        'Netherlands': 'nl',
+        'Brazil': 'br',
+        'Mexico': 'mx',
+        'Russia': 'ru',
+        'Vietnam': 'vn',
+        'Hong Kong': 'hk',
+        'Thailand': 'th',
+        'Philippines': 'ph',
+        'Bulgaria': 'bg'
+        // Add more mappings as needed
+    };
+
+    if (location.toLowerCase() === 'worldwide' || location.toLowerCase() === 'global') {
+        return 'world';
+    }
+
+    return countryMap[location] || '';
 }
 
 
@@ -175,6 +241,19 @@ function isGradeInRange(gradeRange, selectedGrade) {
     }
 
     return gradeRange === selectedGrade;
+}
+
+function getMethodIcon(method) {
+    switch (method.toLowerCase()) {
+        case 'online':
+            return 'computer';
+        case 'offline':
+            return 'event';
+        case 'online & offline':
+            return 'devices';
+        default:
+            return 'help_outline';
+    }
 }
 
 document.addEventListener('DOMContentLoaded', () => {
