@@ -225,23 +225,28 @@ h1 {
 }
 
 .flag-icon {
-    width: 1em;
-    height: 1em;
-    /* border-radius: 50%; */
-    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1); /* Adds a subtle border */
-    background-color: #f0f0f0; /* Light gray background */
+    width: 1.2em;
+    height: 1.2em;
+    border-radius: 2px; /* Slightly rounded corners */
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.05); /* Very subtle border */
+    background-color: transparent; /* Remove the background */
     display: inline-flex;
     justify-content: center;
     align-items: center;
     overflow: hidden;
+    position: relative; /* For pseudo-element positioning */
 }
 
 .flag-icon::before {
     content: '';
-    width: 100%;
-    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
     background-size: cover;
     background-position: center;
+    transform: scale(1.2); /* Slightly enlarge the flag image */
 }
 
 .curated {
