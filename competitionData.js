@@ -124,8 +124,8 @@ const competitions = [
         "organizedBy": "SIMCC (Singapore International Math Contests Center)",
         "indonesiaLocalOrganizer": "SIMCC Indonesia",
         "structure": "Section A: 15 Multiple Choice (2 marks each)\nSection B: 10 Short Answer (4 marks each)\nSection C: 6 Short Answer (5 marks each)\n\nNo penalty for wrong answer\nTotal Score: 100 marks (90 minutes)",
-        "awards": "For each grade level, awards will be given based on global rank:\n\nPerfect Score\nTop 10%: Gold Medal\nNext 15%: Silver Medal\nNext 25%: Bronze Medal\nNext 20%: Honorable Mention",
-        "finalRoundInfo": "Silver & Above is eligible to join SIMOC (SIngapore International Math Olympiad Challenge) and IJMO (International Junior Math Olympiad)\n",
+        "awards": "For each grade level, awards will be given based on global rank:\nPerfect Score\nTop 10%: Gold Medal\nNext 15%: Silver Medal\nNext 25%: Bronze Medal\nNext 20%: Honorable Mention",
+        "finalRoundInfo": "Silver & Above is eligible to join SIMOC (SIngapore International Math Olympiad Challenge) 2024 and IJMO (International Junior Math Olympiad) 2025.\n",
         "compFee": "",
         "website": "https://singamath.com/",
         "samplePaper": ""
