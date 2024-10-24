@@ -30,7 +30,10 @@ function createCompetitionCard(competition) {
                 <div class="competition-location">
                     ${locationHtml}
                 </div>
-                <div class="competition-date">${competition.date}</div>
+                <div class="competition-date">
+                    <i class="material-icons date-icon">event</i>
+                    <span class="competition-date-text">${competition.date.replace(/\n/g, '<br>')}</span>
+                </div>
             </div>
             ${competition.curated === "Yes" ? '<span class="curated">✓ Curated</span>' : ''}
         </div>
@@ -248,7 +251,7 @@ function getMethodIcon(method) {
         case 'online':
             return 'computer';
         case 'offline':
-            return 'event';
+            return 'location_on'; // Changed to a location icon
         case 'online & offline':
             return 'devices';
         default:
@@ -276,3 +279,4 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 });
+
