@@ -125,7 +125,7 @@ const competitions = [
         "indonesiaLocalOrganizer": "SIMCC Indonesia",
         "structure": "Section A: 15 Multiple Choice (2 marks each)\nSection B: 10 Short Answer (4 marks each)\nSection C: 6 Short Answer (5 marks each)\n\nNo penalty for wrong answer\nTotal Score: 100 marks (90 minutes)",
         "awards": "For each grade level, awards will be given based on global rank:\nPerfect Score\nTop 10%: Gold Medal\nNext 15%: Silver Medal\nNext 25%: Bronze Medal\nNext 20%: Honorable Mention",
-        "finalRoundInfo": "Silver & Above is eligible to join SIMOC (SIngapore International Math Olympiad Challenge) 2024 and IJMO (International Junior Math Olympiad) 2025.\n",
+        "finalRoundInfo": "Silver & Above is eligible to join SIMOC (SIngapore International Math Olympiad Challenge) 2024 and IJMO (International Junior Math Olympiad) 2024.\n",
         "compFee": "",
         "website": "https://singamath.com/",
         "samplePaper": ""
@@ -144,7 +144,7 @@ const competitions = [
         "category": "G1, G2, G3, G4, G5, G6,\nG7, G8, G9, \nG10, G11, G12",
         "organizedBy": "SIMCC (Singapore International Math Contests Center)",
         "indonesiaLocalOrganizer": "SIMCC Indonesia",
-        "structure": "Math Olympiad Contest (Individual):\nSection A: 15 Multiple Choice\n- 2 marks for each correct answer\n- 0 mark for each unanswered question\n- 1 mark deducted for each wrong answer\n\nSection B: 10 Short Answer\n- 4 marks for each correct answer\n- No penalty for wrong answer\n\nTo avoid negative scores, each student will begin with 15 marks.\nTotal Score: 85 marks (90 minutes)\n\nMind Sports Challenge (Team-Based)\n\nMaths Warriors and Maths Master Mind Challenge (Team-Based)",
+        "structure": <b>"Math Olympiad Contest (Individual):</b>\nSection A: 15 Multiple Choice\n- 2 marks for each correct answer\n- 0 mark for each unanswered question\n- 1 mark deducted for each wrong answer\n\nSection B: 10 Short Answer\n- 4 marks for each correct answer\n- No penalty for wrong answer\n\nTo avoid negative scores, each student will begin with 15 marks.\nTotal Score: 85 marks (90 minutes)\n\nMind Sports Challenge (Team-Based)\n\nMaths Warriors and Maths Master Mind Challenge (Team-Based)",
         "awards": "Math Olympiad Contest (Individual):\nFor each grade level, awards will be given based on global rank:\nPerfect Score\nTop 10%: Gold Medal\nNext 15%: Silver Medal\nNext 25%: Bronze Medal\nNext 20%: Honorable Mention\n\nMind Sports Challenge / Maths Warriors and Maths Master Mind Challenge (Team-Based)\nAwards for each division:\nTop 8%: Gold Medal\nNext 12%: Silver Medal\nNext 20%: Bronze Medal\n",
         "finalRoundInfo": "Bronze & Above is eligible to join IJMO (International Junior Math Olympiad)",
         "compFee": "",
