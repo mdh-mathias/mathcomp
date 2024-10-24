@@ -149,7 +149,8 @@ const competitions = [
         "finalRoundInfo": "Bronze & Above is eligible to join IJMO (International Junior Math Olympiad)",
         "compFee": "",
         "website": "https://simoc.sg/",
-        "samplePaper": ""
+        "samplePaper": "",
+        "logo":"SIMOC.png"
     },
     {
         "id": "8",
@@ -170,7 +171,8 @@ const competitions = [
         "finalRoundInfo": "",
         "compFee": "",
         "website": "https://ijmo.asia/",
-        "samplePaper": ""
+        "samplePaper": "",
+        "logo":"IJMO.png"
     },
     {
         "id": "9",
@@ -191,7 +193,8 @@ const competitions = [
         "finalRoundInfo": "Only Gold is eligible for the Final Round on 27-31 July 2024 in Seoul & Incheon, South Korea",
         "compFee": "",
         "website": "https://aimo.world/",
-        "samplePaper": "bit.ly/aimosample2"
+        "samplePaper": "bit.ly/aimosample2",
+        "logo":"AIMO.jpg"
     },
     {
         "id": "10",
@@ -212,7 +215,8 @@ const competitions = [
         "finalRoundInfo": "Gold, Silver, and Bronze is eligible for the Final Round on 16-20 August 2024 in Hong Kong",
         "compFee": "",
         "website": "",
-        "samplePaper": ""
+        "samplePaper": "",
+        "logo":"gmec.png"
     },
     {
         "id": "11",
@@ -233,7 +237,8 @@ const competitions = [
         "finalRoundInfo": "Gold, Silver, and Bronze is eligible for the Final Round on 18 May 2024 online",
         "compFee": "",
         "website": "",
-        "samplePaper": "bit.ly/hxcpastpapers"
+        "samplePaper": "bit.ly/hxcpastpapers",
+        "logo":"HXC.jpg"
     },
     {
         "id": "12",
@@ -254,7 +259,8 @@ const competitions = [
         "finalRoundInfo": "Gold, Silver, and Bronze is eligible for the Final Round on 10-12 January 2025 in Da Nang, Vietnam",
         "compFee": "IDR 280,000",
         "website": "",
-        "samplePaper": "bit.ly/fmosamplepapers"
+        "samplePaper": "bit.ly/fmosamplepapers",
+        "logo":"FMO.jpg"
     },
     {
         "id": "13",
@@ -275,7 +281,8 @@ const competitions = [
         "finalRoundInfo": "Gold, Silver, and Bronze is eligible for the Final Round in June 2024 in Singapore",
         "compFee": "",
         "website": "",
-        "samplePaper": "bit.ly/ismcpapers"
+        "samplePaper": "bit.ly/ismcpapers",
+        "logo":"ISMC.jpg"
     },
     {
         "id": "14",
@@ -296,7 +303,8 @@ const competitions = [
         "finalRoundInfo": "Gold, Silver, and Bronze is eligible for the Final Round in June 2024 in Singapore",
         "compFee": "",
         "website": "",
-        "samplePaper": ""
+        "samplePaper": "",
+        "logo":"Mathlympics.jpg"
     },
     {
         "id": "15",
