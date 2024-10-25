@@ -128,7 +128,8 @@ const competitions = [
         "finalRoundInfo": "Silver & Above is eligible to join SIMOC (SIngapore International Math Olympiad Challenge) 2024 and IJMO (International Junior Math Olympiad) 2024.\n",
         "compFee": "",
         "website": "https://singamath.com/",
-        "samplePaper": ""
+        "samplePaper": "",
+        "logo":"SMGF.jpg"
     },
     {
         "id": "7",
@@ -325,7 +326,8 @@ const competitions = [
         "finalRoundInfo": "Gold, Silver, and Bronze is eligible for the Final Round on 22 February 2025 in Chiang Mai, Thailand or online",
         "compFee": "",
         "website": "http://www.thaiimo.com/",
-        "samplePaper": ""
+        "samplePaper": "",
+        "logo":"TIMO.png"
     },
     {
         "id": "16",
@@ -346,7 +348,8 @@ const competitions = [
         "finalRoundInfo": "Gold, Silver, and Bronze is eligible for the Final Round on 15 March 2025 in Hong Kong or online",
         "compFee": "IDR 325,000",
         "website": "https://www.bigbaybei.org/",
-        "samplePaper": ""
+        "samplePaper": "",
+        "logo":"BBB.jpg"
     },
     {
         "id": "17",
@@ -367,7 +370,8 @@ const competitions = [
         "finalRoundInfo": "Gold, Silver, and Bronze is eligible for the Final Round on 24 August 2024 in Hong Kong, or online",
         "compFee": "",
         "website": "http://www.hongkongimo.com/",
-        "samplePaper": ""
+        "samplePaper": "",
+        "logo":"hkimo.png"
     },
     {
         "id": "18",
@@ -388,7 +392,8 @@ const competitions = [
         "finalRoundInfo": "Gold, Silver, and Bronze is eligible for the Final Round on 21 September 2024 in Manila, Philippines, or online",
         "compFee": "",
         "website": "",
-        "samplePaper": ""
+        "samplePaper": "",
+        "logo":"PhIMO.jpg"
     },
     {
         "id": "19",
@@ -409,7 +414,8 @@ const competitions = [
         "finalRoundInfo": "",
         "compFee": "Free",
         "website": "http://www.worldimo.org/",
-        "samplePaper": ""
+        "samplePaper": "",
+        "logo":"WIMO.jpg"
     },
     {
         "id": "20",
@@ -430,7 +436,8 @@ const competitions = [
         "finalRoundInfo": "Gold, Silver, and Bronze is eligible for the Final Round in June in Bulgaria",
         "compFee": "IDR 300,000",
         "website": "https://mathwithoutborders.bg/public_html/en/",
-        "samplePaper": "https://mathwithoutborders.bg/public_html/en/index.php/problems/"
+        "samplePaper": "https://mathwithoutborders.bg/public_html/en/index.php/problems/",
+        "logo":"MWB.png"
     },
     {
         "id": "21",
@@ -451,7 +458,8 @@ const competitions = [
         "finalRoundInfo": "Top 30% of the winners is eligible for the Final Round on 22-25 Nov 2025 in Shinjuku-Perfecture, Japan",
         "compFee": "",
         "website": "",
-        "samplePaper": ""
+        "samplePaper": "",
+        "logo":"AMO_Asia.jpg"
     },
     {
         "id": "22",
@@ -472,7 +480,8 @@ const competitions = [
         "finalRoundInfo": "",
         "compFee": "",
         "website": "",
-        "samplePaper": "https://artofproblemsolving.com/wiki/index.php/AMC_8_Problems_and_Solutions"
+        "samplePaper": "https://artofproblemsolving.com/wiki/index.php/AMC_8_Problems_and_Solutions",
+        "logo":"AMC.jpg"
     },
     {
         "id": "23",
@@ -493,7 +502,8 @@ const competitions = [
         "finalRoundInfo": "",
         "compFee": "IDR 325,000 (until 23 Oct 2024)",
         "website": "",
-        "samplePaper": "https://artofproblemsolving.com/wiki/index.php/AMC_10_Problems_and_Solutions"
+        "samplePaper": "https://artofproblemsolving.com/wiki/index.php/AMC_10_Problems_and_Solutions",
+        "logo":"AMC.jpg"
     },
     {
         "id": "24",
@@ -514,7 +524,8 @@ const competitions = [
         "finalRoundInfo": "",
         "compFee": "IDR 325,000 (until 23 Oct 2024)",
         "website": "",
-        "samplePaper": "https://artofproblemsolving.com/wiki/index.php/AMC_12_Problems_and_Solutions"
+        "samplePaper": "https://artofproblemsolving.com/wiki/index.php/AMC_12_Problems_and_Solutions",
+        "logo":"AMC.jpg"
     },
     {
         "id": "25",
@@ -535,7 +546,8 @@ const competitions = [
         "finalRoundInfo": "",
         "compFee": "IDR 325,000 (until 23 Oct 2024)",
         "website": "",
-        "samplePaper": "https://artofproblemsolving.com/wiki/index.php/AMC_10_Problems_and_Solutions"
+        "samplePaper": "https://artofproblemsolving.com/wiki/index.php/AMC_10_Problems_and_Solutions",
+        "logo":"AMC.jpg"
     },
     {
         "id": "26",
@@ -556,7 +568,8 @@ const competitions = [
         "finalRoundInfo": "",
         "compFee": "IDR 325,000 (until 23 Oct 2024)",
         "website": "",
-        "samplePaper": "https://artofproblemsolving.com/wiki/index.php/AMC_12_Problems_and_Solutions"
+        "samplePaper": "https://artofproblemsolving.com/wiki/index.php/AMC_12_Problems_and_Solutions",
+        "logo":"AMC.jpg"
     },
     {
         "id": "27",
@@ -577,7 +590,8 @@ const competitions = [
         "finalRoundInfo": "",
         "compFee": "",
         "website": "",
-        "samplePaper": ""
+        "samplePaper": "",
+        "logo":"IKMC.jpg"
     },
     {
         "id": "28",
@@ -598,7 +612,8 @@ const competitions = [
         "finalRoundInfo": "",
         "compFee": "IDR 320,000",
         "website": "",
-        "samplePaper": ""
+        "samplePaper": "",
+        "logo":"JISMO.png"
     },
     {
         "id": "29",
@@ -619,6 +634,7 @@ const competitions = [
         "finalRoundInfo": "Gold, Silver, and Bronze is eligible for the Final Round. Gold Medal can participate for free",
         "compFee": "IDR 275,000",
         "website": "",
-        "samplePaper": ""
+        "samplePaper": "",
+        "logo":"FISO.png"
     }
 ]
