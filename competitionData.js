@@ -636,7 +636,7 @@ const competitions = [
         "website": "https://fisoolympiad.com/",
         "samplePaper": "https://fisoolympiad.com/questions/",
         "logo":"FISO.png"
-    }
+    },
     {
         "id": "30",
         "name": "FISO (Future Intelligence Students Olympiad) IQ",
@@ -658,7 +658,7 @@ const competitions = [
         "website": "https://fisoolympiad.com/",
         "samplePaper": "https://fisoolympiad.com/questions/",
         "logo":"FISO.png"
-    }
+    },
     {
         "id": "31",
         "name": "IMEC (International Mathematics Olympiad)",
