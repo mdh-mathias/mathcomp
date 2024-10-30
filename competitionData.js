@@ -695,7 +695,7 @@ const competitions = [
         "category": "Category Kids: G1-G2\nCategory 1: G3-G4\nCategory 2: G5-G6\nCategory 3: G7-G8\nCategory 4: G9-G10\nCategory 5: G11-G12",
         "organizedBy": "BaimaPhli Co., Ltd",
         "indonesiaLocalOrganizer": "IMASO",
-        "structure": "Category Kids: 25 Multiple Choice in 60 minutes\n-Category 1-5: 30 Multiple Choice in 70 minutes",
+        "structure": "Category Kids: 25 Multiple Choice in 60 minutes\nCategory 1-5: 30 Multiple Choice in 70 minutes",
         "awards": "For each category, awards will be given based on global rank:\nFirst Place Winner (Rank 1): iPad Air\nSecond Place Winner (Rank 2-3): iPad Mini\nThird Place Winner (Rank 4-8): Galaxy Tab A7 Lite\nTop 10%: Gold\nNext 15%: Silver\nNext 20%: Bronze",
         "finalRoundInfo": "",
         "compFee": "IDR 500,000",
