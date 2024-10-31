@@ -739,11 +739,11 @@ const competitions = [
         "organizedBy": "SIMCC (Singapore International Math Contests Center)",
         "indonesiaLocalOrganizer": "SIMCC Indonesia",
         "structure": "Individual Round: 20 Short Answer in 60 minutes\nTeam Round:\n-Mounting Mayhem\n-Herding Hexes\n-Relay Rodeo\n-Gallop",
-        "awards": "<b>Individual Round:</b>\nAwards will be given for each of the 5 grades:\nTop 10%: Gold Medal\nNext 15%: Silver Medal\nNext 25%: Bronze Medal\nNext 20%: Honorable Mention\n\n<b>Team Round</b>\nAwards for each division:\nTop 8%: Gold Medal\nNext 12%: Silver Medal\nNext 20%: Bronze Medal\n"
+        "awards": "<b>Individual Round:</b>\nAwards will be given for each of the 5 grades:\nTop 10%: Gold Medal\nNext 15%: Silver Medal\nNext 25%: Bronze Medal\nNext 20%: Honorable Mention\n\n<b>Team Round</b>\nAwards for each division:\nTop 8%: Gold Medal\nNext 12%: Silver Medal\nNext 20%: Bronze Medal",
         "finalRoundInfo": "",
         "compFee": "",
         "website": "https://www.mustangmath.com/",
         "samplePaper": "https://www.mustangmath.com/past-tests",
         "logo":""
-    },
+    }
 ]
