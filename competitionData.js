@@ -726,7 +726,7 @@ const competitions = [
         "logo":""
     },
     {
-    "id": "34",
+        "id": "34",
         "name": "MMT (Mustang Math Tournament)",
         "location": "USA",
         "method": "Online",
