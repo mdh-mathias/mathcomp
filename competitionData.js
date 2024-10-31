@@ -725,6 +725,7 @@ const competitions = [
         "samplePaper": "",
         "logo":""
     },
+    {
     "id": "34",
         "name": "MMT (Mustang Math Tournament)",
         "location": "USA",
