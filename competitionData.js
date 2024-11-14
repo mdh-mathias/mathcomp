@@ -679,7 +679,7 @@ const competitions = [
         "compFee": "IDR 275,000",
         "website": "",
         "samplePaper": "bit.ly/imecpapers",
-        "logo":""
+        "logo":"imec.png"
     },
     {
         "id": "32",
@@ -745,6 +745,6 @@ const competitions = [
         "compFee": "",
         "website": "https://www.mustangmath.com/",
         "samplePaper": "https://www.mustangmath.com/past-tests",
-        "logo":""
+        "logo":"mmt.jpg"
     }
 ]
