@@ -723,7 +723,7 @@ const competitions = [
         "compFee": "",
         "website": "",
         "samplePaper": "",
-        "logo":""
+        "logo":"IMOCSEA_square.png"
     },
     {
         "id": "34",
@@ -745,6 +745,6 @@ const competitions = [
         "compFee": "",
         "website": "https://www.mustangmath.com/",
         "samplePaper": "https://www.mustangmath.com/past-tests",
-        "logo":"MMT.jpg"
+        "logo":"MMT.png"
     }
 ]
