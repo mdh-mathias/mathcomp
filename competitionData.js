@@ -679,7 +679,7 @@ const competitions = [
         "compFee": "IDR 275,000",
         "website": "",
         "samplePaper": "bit.ly/imecpapers",
-        "logo":"imec.png"
+        "logo":"IMEC.png"
     },
     {
         "id": "32",
@@ -701,7 +701,7 @@ const competitions = [
         "compFee": "IDR 500,000",
         "website": "https://mathchallenge.in.th/online/",
         "samplePaper": "https://mathchallenge.in.th/imc-past-papers/",
-        "logo":""
+        "logo":"IMC.png"
     },
     {
         "id": "33",
@@ -745,6 +745,6 @@ const competitions = [
         "compFee": "",
         "website": "https://www.mustangmath.com/",
         "samplePaper": "https://www.mustangmath.com/past-tests",
-        "logo":"mmt.jpg"
+        "logo":"MMT.jpg"
     }
 ]
